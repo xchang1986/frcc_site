@@ -805,7 +805,12 @@ color: #ccc;
   text-align: center;
 }
 #services .info-services .info-image img {
-  height: 182px;
+  height: 180px;
+  margin: auto;
+  width: auto;
+}
+.info-image img {
+  height: 180px;
   margin: auto;
   width: auto;
 }
