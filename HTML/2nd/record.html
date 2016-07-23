@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <title>FRCC</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css" id="color-switcher-link">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script>
+    var b = document.documentElement;
+    b.setAttribute('data-useragent', navigator.userAgent);
+    b.setAttribute('data-platform', navigator.platform);
+    
+    
+    // HTML5 audio player + playlist controls...
+    jQuery(function ($) {
+           var supportsAudio = !!document.createElement('audio').canPlayType;
+           if (supportsAudio) {
+           var index = 0,
+           playing = false,
+           mediaPath = '../MP3/',
+           extension = '',
+           tracks = [{
+                     "track": 1,
+                     "name": "2016/07/17 屬靈爭戰的秘訣(一)",
+             
+                     "file": "20160717"
+                     }, {
+                     "track": 2,
+                     "name": "2016/07/10 屬靈爭戰的得勝方法",
+                     
+                     "file": "20160710"
+                     }, {
+                     "track": 3,
+                     "name": "2016/07/03 凡有的還要再加給他(三)",
+                   
+                     "file": "20160703"
+                     }, {
+                     "track": 4,
+                     "name": "2016/06/26 凡有的還要加給他(二)",
+                  
+                     "file": "20160626"
+                     }, {
+                     "track": 5,
+                     "name": "2016-06-19 凡有的還要加給他(一)",
+                     "length": "05:05",
+                     "file": "20160619"
+                     }, {
+                     "track": 6,
+                     "name": "2016/06/12 接待神的同在",
+                 
+                     "file": "20160612"
+                     }, {
+                     "track": 7,
+                     "name": "2016/06/05 神國降臨(4)：活出愛的權能",
+                 
+                     "file": "20160605"
+                     }, {
+                     "track": 8,
+                     "name": "2016/05/29 進入聖靈的新樣",
+                    
+                     "file": "20160529"
+                     }, {
+                     "track": 9,
+                     "name": "2016/05/22 彼此相愛",
+                     
+                     "file": "20160522"
+                     }, {
+                     "track": 10,
+                     "name": "2016/05/15 從神永恆的心意 來看我們追求的標竿",
+                 
+                     "file": "20160515"
+                     }, {
+                     "track": 11,
+                     "name": "2016/05/08 你要得痊癒嗎？",
+                     
+                     "file": "20160508"
+                     }, {
+                     "track": 12,
+                     "name": "2016/04/24 除去舊酵成為新團",
+                    
+                     "file": "20160424"
+                     }, {
+                     "track": 13,
+                     "name": "2016/04/17 復興的火種",
+                    
+                     "file": "20160417"
+                     }, {
+                     "track": 14,
+                     "name": "2016/04/03 悔改認罪 是神建造新的生命的根基",
+                 
+                     "file": "20160403"
+                     }, {
+                     "track": 15,
+                     "name": "2016/03/27 安息之法：禱告把自己獻上",
+                    
+                     "file": "20160327"
+                     }, {
+                     "track": 16,
+                     "name": "2016/03/20 信息",
+               
+                     "file": "20160320"
+                     }, {
+                     "track": 17,
+                     "name": "2016/03/13 建造城牆堵住生命的破口",
+                    
+                     "file": "20160313"
+                     }, {
+                     "track": 18,
+                     "name": "2016/03/06 撒種 -- 得著神國的產業",
+                    
+                     "file": "20160306"
+                     }, {
+                     "track": 19,
+                     "name": "2016/02/28 以智慧建造城市（9）：教會24X7禱告城牆及國家40天禁食",
+                
+                     "file": "20160228"
+                     }, {
+                     "track": 20,
+                     "name": "2016/02/21 神藉著我們和別人的軟弱，成全在我們一生的旨意",
+                  
+                     "file": "20160221"
+                     }, {
+                     "track": 21,
+                     "name": "2016/02/14 呼籲祂的 ，不要使祂歇息",
+                     
+                     "file": "20160214"
+                     }, {
+                     "track": 22,
+                     "name": "2016/01/31 信心中的看見",
+                   
+                     "file": "20160131"
+                     }, {
+                     "track": 23,
+                     "name": "2016/01/24 週日得著生命的冠冕",
+                    
+                     "file": "20160124"
+                     }, {
+                     "track": 24,
+                     "name": "2016/01/17 週日",
+                     
+                     "file": "20160117"
+                     }, {
+                     "track": 25,
+                     "name": "2016/01/10 週日",
+                     
+                     "file": "20160110"
+                     }, {
+                     "track": 26,
+                     "name": "2016/01/03 屬靈爭戰的秘訣(二)",
+                    
+                     "file": "20160103"
+                     }],
+           trackCount = tracks.length,
+           npAction = $('#npAction'),
+           npTitle = $('#npTitle'),
+           audio = $('#audio1').bind('play', function () {
+                                     playing = true;
+                                     npAction.text('Now Playing...');
+                                     }).bind('pause', function () {
+                                             playing = false;
+                                             npAction.text('Paused...');
+                                             }).bind('ended', function () {
+                                                     npAction.text('Paused...');
+                                                     if ((index + 1) < trackCount) {
+                                                     index++;
+                                                     loadTrack(index);
+                                                     audio.play();
+                                                     } else {
+                                                     audio.pause();
+                                                     index = 0;
+                                                     loadTrack(index);
+                                                     }
+                                                     }).get(0),
+           btnPrev = $('#btnPrev').click(function () {
+                                         if ((index - 1) > -1) {
+                                         index--;
+                                         loadTrack(index);
+                                         if (playing) {
+                                         audio.play();
+                                         }
+                                         } else {
+                                         audio.pause();
+                                         index = 0;
+                                         loadTrack(index);
+                                         }
+                                         }),
+           btnNext = $('#btnNext').click(function () {
+                                         if ((index + 1) < trackCount) {
+                                         index++;
+                                         loadTrack(index);
+                                         if (playing) {
+                                         audio.play();
+                                         }
+                                         } else {
+                                         audio.pause();
+                                         index = 0;
+                                         loadTrack(index);
+                                         }
+                                         }),
+           li = $('#plList li').click(function () {
+                                      var id = parseInt($(this).index());
+                                      if (id !== index) {
+                                      playTrack(id);
+                                      }
+                                      }),
+           loadTrack = function (id) {
+           $('.plSel').removeClass('plSel');
+           $('#plList li:eq(' + id + ')').addClass('plSel');
+           npTitle.text(tracks[id].name);
+           index = id;
+           audio.src = mediaPath + tracks[id].file + extension;
+           },
+           playTrack = function (id) {
+           loadTrack(id);
+           audio.play();
+           };
+           extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+           loadTrack(index);
+           }
+           });
+</script>
+<style>
+@import url("//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400");
+    
+/* Desktop
+================================================== */
+
+.container { position:relative; margin:0 auto; width:700px; }
+.column { width:inherit; }
+
+
+/* Tablet (Portrait)
+ ================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container { width:556px; }
+}
+
+
+/* Mobile (Portrait)
+ ================================================== */
+
+@media only screen and (max-width: 767px) {
+    .container { width:300px; }
+}
+
+
+/* Mobile (Landscape)
+ ================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container { width:420px; }
+}
+
+
+/* CSS Reset
+ ================================================== */
+
+html,body,div,span,h1,h6,p,a,ul,li,audio {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+}
+
+body { line-height:1; }
+ul { list-style:none; }
+
+
+/* Basic Styles
+ ================================================== */
+
+html,body {
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    background-color:#111;
+    color:#C8C7C8;
+    font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight:300;
+    padding:5px 0;
+}
+
+* {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* Typography
+ ================================================== */
+
+h1,h6,p { color:#808080; font-weight:200; }
+h1 { font-size:42px; line-height:44px; margin:20px 0 0; }
+h6 { font-size:18px; line-height:20px; margin:4px 0 20px; }
+p { font-size:18px; line-height:20px; margin:0 0 2px; }
+
+
+/* Links
+ ================================================== */
+
+a,a:visited { color:#ddd; outline:0; text-decoration:underline; }
+a:hover,a:focus { color:#bbb; }
+p a,p a:visited { line-height:inherit; }
+
+
+/* Misc.
+ ================================================== */
+
+.add-bottom { margin-bottom:20px !important; }
+.left { float:left; }
+.right { float:right; }
+
+
+/* Custom Styles
+ ================================================== */
+
+/* CSS Transitions */
+* {
+    -moz-transition:all 100ms ease;
+    -o-transition:all 100ms ease;
+    -webkit-transition:all 100ms ease;
+    transition:all 100ms ease;
+}
+
+/* Highlight Styles */
+::selection { background-color:#F5F2F1; color:#F5F2F1; }
+::-moz-selection { background-color:#262223; color:#F5F2F1; }
+
+
+/* Audio Player Styles
+ ================================================== */
+
+/* Default / Desktop / Firefox */
+audio { margin:0 15px 0 14px; width:670px; }
+#mainwrap { /* add box-shadow or other styles here */ }
+#audiowrap { background-color:#231F20; margin:0 auto; }
+#plwrap { margin:0 auto; }
+#tracks { min-height:65px; position:relative;  text-decoration:none; top:13px; }
+#nowPlay { display:inline; }
+#npTitle { margin:0; padding:21px; text-align:right; }
+#npAction { padding:21px; position:absolute; }
+#plList { margin:0; }
+#plList li { background-color:#231F20; cursor:pointer; margin:0; padding:21px 0; }
+#plList li:hover { background-color:#262223; }
+.plItem { position:relative; }
+.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plNum { padding-left:21px; width:25px; }
+.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
+.plSel,.plSel:hover { background-color:#262223!important; cursor:default!important; }
+a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
+a[id^="btn"]:last-child { margin-left:-4px; }
+a[id^="btn"]:hover,a[id^="btn"]:active { background-color:#262223; }
+a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
+
+/* IE 9 */
+html[data-useragent*="MSIE 9.0"] audio { margin-left:9px; outline:none; width:680px; }
+html[data-useragent*="MSIE 9.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] #tracks { min-height:57px; top:5px; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"]:hover { background-color:#F5F2F1; }
+html[data-useragent*="MSIE 9.0"] #plList li { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] #plList li:hover { background-color:#F5F2F1; }
+html[data-useragent*="MSIE 9.0"] .plSel,
+html[data-useragent*="MSIE 9.0"] .plSel:hover { background-color:#F5F2F1!important; }
+
+/* IE 10 */
+html[data-useragent*="MSIE 10.0"] audio { margin-left:6px; width:687px; }
+html[data-useragent*="MSIE 10.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #tracks { min-height:60px; top:8px; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#F5F2F1; }
+html[data-useragent*="MSIE 10.0"] #plList li { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#F5F2F1; }
+html[data-useragent*="MSIE 10.0"] .plSel,
+html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#F5F2F1!important; }
+
+/* IE 11 */
+html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
+html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="rv:11.0"] #tracks { min-height:60px; top:8px; }
+html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#F5F2F1; }
+html[data-useragent*="rv:11.0"] #plList li { background-color:#000; }
+html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#F5F2F1; }
+html[data-useragent*="rv:11.0"] .plSel,
+html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#F5F2F1!important; }
+
+/* All Apple Products */
+html[data-useragent*="Apple"] audio { margin:0; width:100%; }
+html[data-useragent*="Apple"] #audiowrap { background-color:#000; }
+html[data-useragent*="Apple"] #tracks { min-height:64px; top:12px; }
+html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#F5F2F1; }
+html[data-useragent*="Apple"] #plList li { background-color:#000; }
+html[data-useragent*="Apple"] #plList li:hover { background-color:#F5F2F1; }
+html[data-useragent*="Apple"] .plSel,
+html[data-useragent*="Apple"] .plSel:hover { background-color:#F5F2F1!important; }
+
+/* IOS 7 */
+html[data-useragent*="OS 7"] body { color:#373837; }
+html[data-useragent*="OS 7"] audio { margin-left:3px; width:690px; }
+html[data-useragent*="OS 7"] #audiowrap { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] #tracks { min-height:75px; top:23px; }
+html[data-useragent*="OS 7"] a[id^="btn"] { background-color:#e6e6e6; color:#373837; }
+html[data-useragent*="OS 7"] a[id^="btn"]:hover { background-color:#eee; }
+html[data-useragent*="OS 7"] #plList li { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 7"] .plSel,
+html[data-useragent*="OS 7"] .plSel:hover { background-color:#eee!important; }
+
+/* IOS 8 */
+html[data-useragent*="OS 8"] body { color:#373837; }
+html[data-useragent*="OS 8"] audio { margin-left:6px; width:694px; }
+html[data-useragent*="OS 8"] #audiowrap { background-color:#e4e4e4; }
+html[data-useragent*="OS 8"] #tracks { min-height:75px; top:23px; }
+html[data-useragent*="OS 8"] a[id^="btn"] { background-color:#e4e4e4; color:#373837; }
+html[data-useragent*="OS 8"] a[id^="btn"]:hover { background-color:#eee; }
+html[data-useragent*="OS 8"] #plList li { background-color:#e4e4e4; }
+html[data-useragent*="OS 8"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 8"] .plSel,
+html[data-useragent*="OS 8"] .plSel:hover { background-color:#eee!important; }
+
+/* IOS 9 */
+html[data-useragent*="OS 9"] body { color:#373837; }
+html[data-useragent*="OS 9"] audio { margin-left:6px; width:694px; }
+html[data-useragent*="OS 9"] #audiowrap { background-color:#d5d5d5; }
+html[data-useragent*="OS 9"] #tracks { min-height:75px; top:23px; }
+html[data-useragent*="OS 9"] a[id^="btn"] { background-color:#d5d5d5; color:#373837; }
+html[data-useragent*="OS 9"] a[id^="btn"]:hover { background-color:#eee; }
+html[data-useragent*="OS 9"] #plList li { background-color:#d5d5d5; }
+html[data-useragent*="OS 9"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 9"] .plSel,
+html[data-useragent*="OS 9"] .plSel:hover { background-color:#eee!important; }
+
+/* Chrome */
+html[data-useragent*="Chrome"] audio { margin-left:6px; width:687px; }
+html[data-useragent*="Chrome"] #audiowrap { background-color:#141414; }
+html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
+html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#141414; }
+html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#171717; }
+html[data-useragent*="Chrome"] #plList li { background-color:#141414; }
+html[data-useragent*="Chrome"] #plList li:hover { background-color:#171717; }
+html[data-useragent*="Chrome"] .plSel,
+html[data-useragent*="Chrome"] .plSel:hover { background-color:#171717!important; }
+
+/* Chrome / Android / Tablet */
+html[data-useragent*="Chrome"][data-useragent*="Android"] body { color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:689px; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:#fafafa; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #tracks { min-height:75px; top:23px; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:#fafafa; color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:#eee; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li { background-color:#fafafa; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel,
+html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { background-color:#eee!important; }
+
+
+/* Audio Player Media Queries
+ ================================================== */
+
+/* Tablet Portrait */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    audio { width:526px; }
+    html[data-useragent*="MSIE 9.0"] audio { width:536px; }
+    html[data-useragent*="MSIE 10.0"] audio { width:543px; }
+    html[data-useragent*="rv:11.0"] audio { width:551px; }
+    html[data-useragent*="OS 7"] audio { width:546px; }
+    html[data-useragent*="OS 8"] audio { width:550px; }
+    html[data-useragent*="OS 9"] audio { width:550px; }
+    html[data-useragent*="Chrome"] audio { width:543px; }
+    html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:545px; }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    audio { width:390px; }
+    html[data-useragent*="MSIE 9.0"] audio { width:400px; }
+    html[data-useragent*="MSIE 10.0"] audio { width:407px; }
+    html[data-useragent*="rv:11.0"] audio { width:415px; }
+    html[data-useragent*="OS 7"] audio { width:410px; }
+    html[data-useragent*="OS 8"] audio { width:414px; }
+    html[data-useragent*="OS 9"] audio { width:414px; }
+    html[data-useragent*="Chrome"] audio { width:407px; }
+    html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px; width:410px; }
+    #npTitle { width:245px; }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+    audio { width:270px; }
+    html[data-useragent*="MSIE 9.0"] audio { width:280px; }
+    html[data-useragent*="MSIE 10.0"] audio { width:287px; }
+    html[data-useragent*="rv:11.0"] audio { width:295px; }
+    html[data-useragent*="OS 7"] audio { width:290px; }
+    html[data-useragent*="OS 8"] audio { width:294px; }
+    html[data-useragent*="OS 9"] audio { width:294px; }
+    html[data-useragent*="Chrome"] audio { width:287px; }
+    html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px; width:290px; }
+    #npTitle { width:167px; }
+}
+</style>
+</head>
+<body>
+
+<div id="box_wrapper">
+<section id="content" > <!-- class="grey_section blog-single left-sidebar" -->
+	<div class="container">
+		<div class="row">
+			<div class="container">
+                <div class="column center">
+                    <h1>主日錄音</h1>
+                </div>
+                <div class="column add-bottom">
+                    <div id="mainwrap">
+                        <div id="nowPlay">
+                            <span class="left" id="npAction">Paused...</span>
+                            <span class="right" id="npTitle"></span>
+                        </div>
+                        <div id="audiowrap">
+                            <div id="audio0">
+                                <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                            </div>
+                            <div id="tracks">
+                                <a id="btnPrev">&laquo;</a>
+                                <a id="btnNext">&raquo;</a>
+                            </div>
+                        </div>
+                        <div id="plwrap">
+                            <ul id="plList">
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">01.</div>
+                                        <div class="plTitle">2016/07/17 屬靈爭戰的秘訣(一)</div>
+                                   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">02.</div>
+                                        <div class="plTitle">2016/07/10 屬靈爭戰的得勝方法</div>
+                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">03.</div>
+                                        <div class="plTitle">2016/07/03 凡有的還要再加給他(三)</div>
+                                  
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">04.</div>
+                                        <div class="plTitle">2016/06/26 凡有的還要加給他(二)</div>
+                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">05.</div>
+                                        <div class="plTitle">2016-06-19 凡有的還要加給他(一)</div>
+                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">06.</div>
+                                        <div class="plTitle">2016/06/12 接待神的同在</div>
+                                     
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">07.</div>
+                                        <div class="plTitle">2016/06/05 神國降臨(4)：活出愛的權能</div>
+                                   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">08.</div>
+                                        <div class="plTitle">2016/05/29 進入聖靈的新樣</div>
+                                      
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">09.</div>
+                                        <div class="plTitle">2016/05/22 彼此相愛</div>
+                                   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">10.</div>
+                                        <div class="plTitle">2016/05/15 從神永恆的心意 來看我們追求的標竿</div>
+                                       
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">11.</div>
+                                        <div class="plTitle">2016/05/08 你要得痊癒嗎？</div>
+                                   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">12.</div>
+                                        <div class="plTitle">2016/04/24 除去舊酵成為新團</div>
+                                  
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">13.</div>
+                                        <div class="plTitle">2016/04/17 復興的火種</div>
+                                     
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">14.</div>
+                                        <div class="plTitle">2016/04/03 悔改認罪 是神建造新的生命的根基</div>
+                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">15.</div>
+                                        <div class="plTitle">2016/03/27 安息之法：禱告把自己獻上</div>
+                                  
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">16.</div>
+                                        <div class="plTitle">2016/03/20 信息</div>
+                                     
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">17.</div>
+                                        <div class="plTitle">2016/03/13 建造城牆堵住生命的破口</div>
+                                      
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">18.</div>
+                                        <div class="plTitle">2016/03/06 撒種 -- 得著神國的產業</div>
+                                 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">19.</div>
+                                        <div class="plTitle">2016/02/28 以智慧建造城市（9）：教會24X7禱告城牆及國家40天禁食</div>
+                                  
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">20.</div>
+                                        <div class="plTitle">2016/02/21 神藉著我們和別人的軟弱，成全在我們一生的旨意</div>
+                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">21.</div>
+                                        <div class="plTitle">2016/02/14 呼籲祂的 ，不要使祂歇息</div>
+                                   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">22.</div>
+                                        <div class="plTitle">2016/01/31 信心中的看見</div>
+                                 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">23.</div>
+                                        <div class="plTitle">2016/01/24 週日得著生命的冠冕</div>
+                                     
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">24.</div>
+                                        <div class="plTitle">2016/01/17 週日</div>
+                                     
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">25.</div>
+                                        <div class="plTitle">2016/01/10 週日</div>
+                                
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="plItem">
+                                        <div class="plNum">26.</div>
+                                        <div class="plTitle">2016/01/03 屬靈爭戰的秘訣(二)</div>
+                                       
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+ 
+
+
+    <section id="copyright" class="darkgrey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>&copy; Copyright 2016 - FRCC</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+ 
+
+</div><!-- eof #box_wrapper -->
+
+
+
+        <!-- libraries -->
+        <script src="../js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/jquery.appear.js"></script>
+
+        <!-- superfish menu  -->
+        <script src="../js/vendor/jquery.hoverIntent.js"></script>
+        <script src="../js/vendor/superfish.js"></script>
+        
+        <!-- page scrolling -->
+        <script src="../js/vendor/jquery.easing.1.3.js"></script>
+        <script src='../js/vendor/jquery.nicescroll.min.js'></script>
+        <script src="../js/vendor/jquery.ui.totop.js"></script>
+        <script src="../js/vendor/jquery.localscroll-min.js"></script>
+        <script src="../js/vendor/jquery.scrollTo-min.js"></script>
+        <script src='../js/vendor/jquery.parallax-1.1.3.js'></script>
+
+        <!-- widgets -->
+        <script src="../js/vendor/jquery.easypiechart.min.js"></script><!-- pie charts -->
+        <script src='../js/vendor/jquery.countTo.js'></script><!-- digits counting -->
+        <script src="../js/vendor/jquery.prettyPhoto.js"></script><!-- lightbox photos -->
+        <script src='../js/vendor/jflickrfeed.min.js'></script><!-- flickr -->
+        <!-- sliders, filters, carousels -->
+        <script src="../js/vendor/jquery.isotope.min.js"></script>
+        <script src='../js/vendor/owl.carousel.min.js'></script>
+        <script src='../js/vendor/jquery.fractionslider.min.js'></script>
+
+        <!-- custom scripts -->
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <!--Social Buttons Scripts-->
+
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "ur-6a7e320d-37d8-511-633d-4264e3ae8c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    <script>w3IncludeHTML();</script>
+</body>
+</html>
